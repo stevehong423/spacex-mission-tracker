@@ -1,4 +1,10 @@
-import { AppBar, CssBaseline, Toolbar, Typography } from '@mui/material'
+import {
+  AppBar,
+  Container,
+  CssBaseline,
+  Toolbar,
+  Typography,
+} from '@mui/material'
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
 import { useStyles } from './styles'
 // Components
@@ -21,7 +27,9 @@ const App: React.FC = () => {
       </AppBar>
 
       <div className={classes.container}>
-        <MissionDisplay />
+        <Container maxWidth="lg">
+          <MissionDisplay />
+        </Container>
       </div>
     </ApolloProvider>
   )

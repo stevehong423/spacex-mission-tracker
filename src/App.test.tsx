@@ -1,4 +1,4 @@
-import { findByTestId, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { MockedProvider } from '@apollo/client/testing'
 import { GET_MISSIONS } from './queries/getMissions'
 import MissionDisplay from './components/MissionDisplay'

@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
   },
 
   container: {
-    backgroundColor: '#FAFAFA',
+    backgroundColor: '#white',
     paddingBottom: '2rem',
   },
 
