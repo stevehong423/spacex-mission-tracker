@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { AppBar, CssBaseline, Toolbar, Typography } from '@mui/material'
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch'
+import { useStyles } from './styles'
+// Components
+import MissionDisplay from './components/MissionDisplay'
+// Apollo
+import client from './apollo/apolloClient'
+import { ApolloProvider } from '@apollo/client'
 
-function App() {
+const App: React.FC = () => {
+  const classes = useStyles()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ApolloProvider client={client}>
+      <CssBaseline />
+      <AppBar position="relative" className={classes.appBar}>
+        <Toolbar>
+          <RocketLaunchIcon className={classes.icon} />
+          <Typography variant="h6">SpaceX Mission Tracker</Typography>
+        </Toolbar>
+      </AppBar>
+
+      <div className={classes.container}>
+        <MissionDisplay />
+      </div>
+    </ApolloProvider>
+  )
 }
 
-export default App;
+export default App
