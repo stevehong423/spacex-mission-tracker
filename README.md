@@ -11,7 +11,9 @@ App includes a unit test, using a Mock Provider and mock data to simulate the Ap
 React, TypeScript, GraphQL (Apollo Client), Material UI
 
 # Run the App
-`npm start`
+1. Clone App: `git clone https://github.com/stevehong423/spacex-mission-tracker.git`
+1. Install node_modules: `npm install --legacy-peer-deps`
+2. Run Application: `npm start`
 
 
 # Run Tests
